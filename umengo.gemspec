@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["huoshiqiu@gmail.com"]
 
   spec.summary       = %q{ Umeng ruby sdk }
-  spec.description   = %q{ Inspiration comes from [umeng](https://github.com/menghuanwd/umeng) }
+  spec.description   = %q{ Umeng ruby sdk }
   spec.homepage      = "https://github.com/huoshiqiu/umengo"
   spec.license       = "MIT"
 
