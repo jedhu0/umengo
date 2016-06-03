@@ -135,6 +135,11 @@ client.listcast(device_tokens, android_params)
 
 ## Development
 
+### TODO
+
+- Spec tests
+- Make the parameters more easily assembled
+- ios and android more easily distinguish
 
 ## Contributing
 
