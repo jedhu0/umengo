@@ -20,13 +20,121 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+- params require  :data, :payload, :body
+
+- params optional :extra, :extra, :policy
+
+#### Android push params
+
+```ruby
+    android_params = {
+      data: {
+        alias_type: "xx",
+        alias: "xx",
+        file_id: "xx",
+        filter: {},
+        production_mode: ENV["UMENG_PRO_MODE"] || "false",
+        description: "xx",
+        thirdparty_id: "xx"
+      },
+      payload: {
+        display_type: "notifcation"
+      },
+      body: {
+        ticker: "买手 App",
+        title: "买手 App",
+        text: content,
+        after_open: "go_activity",
+        activity: "xx"
+        icon: "xx",
+        largeIcon: "xx",
+        img: "xx",
+        sound: "xx",
+        builder_id: "xx",
+        play_vibrate: "true/false",
+        play_lights:" true/false",
+        play_sound: "true/false",
+        url: "xx",
+        custom: "xx"/{}
+      }
+      extra: {
+        key1: "value1",
+      },
+      policy: {
+        start_time: "xx",
+        expire_time: "xx",
+        max_send_num: "xx",
+        out_biz_no: "xx"
+      }
+    }
+
+```
+
+#### Ios push params
+```ruby
+    ios_params = {
+      data: {
+        alias_type: "xx",
+        alias: "xx",
+        file_id: "xx",
+        filter: {},
+        production_mode: ENV["UMENG_PRO_MODE"] || "false",
+        description: "xx",
+        thirdparty_id: "xx"
+      },
+      body: {
+        alert: content,
+        badge: "xx",
+        sound: "xx",
+        "content-available" => "xx",
+        category: "xx"
+        icon: "xx",
+        largeIcon: "xx",
+        img: "xx",
+        sound: "xx",
+        builder_id: "xx",
+        play_vibrate: "true/false",
+        play_lights:" true/false",
+        play_sound: "true/false",
+        url: "xx",
+        custom: "xx"/{}
+      }
+      extra: {
+        key1: "value1",
+      },
+      policy: {
+        start_time: "xx",
+        expire_time: "xx",
+        max_send_num: "xx",
+        out_biz_no: "xx"
+      }
+    }
+```
+
+```ruby
+plantform = "ios/android"
+client = Umengo::Client.new(appkey, app_master_secret, plantform)
+```
+
+##### broadcast
+```
+client.broadcast(android_params)
+```
+
+
+##### unicast
+```
+client.unicast(device_tokens, android_params)
+```
+
+##### listcast
+```
+client.listcast(device_tokens, android_params)
+```
+
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
