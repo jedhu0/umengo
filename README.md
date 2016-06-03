@@ -33,18 +33,18 @@ Or install it yourself as:
         alias: "xx",
         file_id: "xx",
         filter: {},
-        production_mode: ENV["UMENG_PRO_MODE"] || "false",
+        production_mode: "true/false",
         description: "xx",
         thirdparty_id: "xx"
       },
       payload: {
-        display_type: "notifcation"
+        display_type: "notifcation/message"
       },
       body: {
-        ticker: "买手 App",
-        title: "买手 App",
-        text: content,
-        after_open: "go_activity",
+        ticker: "xxx",
+        title: "xxx",
+        text: "content",
+        after_open: "xx",
         activity: "xx"
         icon: "xx",
         largeIcon: "xx",
@@ -78,12 +78,12 @@ Or install it yourself as:
         alias: "xx",
         file_id: "xx",
         filter: {},
-        production_mode: ENV["UMENG_PRO_MODE"] || "false",
+        production_mode: "false",
         description: "xx",
         thirdparty_id: "xx"
       },
       body: {
-        alert: content,
+        alert: "content",
         badge: "xx",
         sound: "xx",
         "content-available" => "xx",
