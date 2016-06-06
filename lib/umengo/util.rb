@@ -5,7 +5,7 @@ module Umengo
     def generate_sign(uri, params)
       method = 'POST'
       url = [Umengo::UMENG_HOST, '/', uri]
-      post_body = Oj.dump(params)
+      post_body = JSON.dump(params)
       Digest::MD5.hexdigest([method, url, post_body, @app_master_secret].join)
     end
 
